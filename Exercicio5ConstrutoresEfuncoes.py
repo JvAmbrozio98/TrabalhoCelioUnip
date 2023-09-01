@@ -48,27 +48,11 @@ def  entradaPeloUsuario():
 def testeAutomatizado(x):
     nomesCidadesReais = [
     "São Paulo", "Rio de Janeiro", "Belo Horizonte", "Salvador", "Brasília", 
-    "Curitiba", "Fortaleza", "Recife", "Porto Alegre", "Manaus"]
-    x = 0
-    numeroAleatorio = random.randint(1,10000000000000)
+    "Curitiba", "Fortaleza", "Recife", "Porto Alegre", "Manaus","Botucatu","Bauru"]
+    numeroAleatorio = random.randint(1,1000)
     populacaoAleatoria = distribuirPopulacao(numeroAleatorio,3)
     instanciaDeCidade = Municipio(nomesCidadesReais[x],populacaoAleatoria)
     return instanciaDeCidade
 
 
 
-def escolhaDeModo ():
-    escolhaFeita = False
-
-    while(not escolhaFeita):
-        escolha = int(input("Digie 1 para automatico"))
-        if(escolha == 1):
-            quantidadeDecidades = int(input("Digite a quantidade de cidades que vc deseja 1 - 10 "))
-            instanciaDeCidade = testeAutomatizado(quantidadeDecidades)
-            escolhaFeita = True
-            return instanciaDeCidade 
-        else:
-            instanciaDeCidade = entradaPeloUsuario ()
-            escolhaFeita = True
-            nstanciaDeCidade = entradaPeloUsuario()
-            return instanciaDeCidade 

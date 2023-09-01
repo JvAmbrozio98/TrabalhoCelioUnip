@@ -1,27 +1,21 @@
 #
-import random
+
 from Exercicio5ConstrutoresEfuncoes import Municipio,distribuirPopulacao,testeAutomatizado,entradaPeloUsuario,escolhaDeModo
-
-
-
 listaDeCidades = []
-nomesCidadesReais = [
-    "São Paulo", "Rio de Janeiro", "Belo Horizonte", "Salvador", "Brasília", 
-    "Curitiba", "Fortaleza", "Recife", "Porto Alegre", "Manaus"
-]
 x = 0
+# instanciaDeCidade = escolhaDeModo()
 
-instanciaDeCidade = escolhaDeModo()
-
-
-
-
+escolhaRapida = int(input("Digite 0 para usar os testes automaticos e qualquer outro numero para realizar as entradas   "))
 
 while(x < 10):
     
+    if(escolhaRapida == 0):
+        instanciaDeCidade = testeAutomatizado(x)
+    else:
+        instanciaDeCidade = entradaPeloUsuario()
+
     
-    
-   
+    #1instanciaDeCidade = entradaPeloUsuario ()
     print(f'\n**********************************************************************')    
     print(f'\n Na cidade de : {instanciaDeCidade.nome}')    
     print(f'\nO numero de votos total  eh: {instanciaDeCidade.totalDeVotos}')    
@@ -35,11 +29,8 @@ while(x < 10):
     listaDeCidades.append(instanciaDeCidade)
     x += 1
 
-    
+    cidadeComMaisVotosTotais = max(listaDeCidades,key=lambda x: x.totalDeVotos)
 
-
-
-cidadeComMaisVotosTotais = max(listaDeCidades,key=lambda x: x.totalDeVotos)
 print(f'**********************************************************************')
 print(f'A cidade com mais eleitores eh : {cidadeComMaisVotosTotais.nome} \n ')
 print(f'A quantidade total de votos eh  {cidadeComMaisVotosTotais.totalDeVotos} \n ')
