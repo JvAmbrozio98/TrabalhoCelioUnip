@@ -5,7 +5,7 @@ def imprimirNumerosAnterioresPosteriores(numero:int):
     numerosPosteriores = []
 
     i = numero - 50
-    while i < numero:
+    while i < :
         numerosAnteriores.append(i)
         i += 1
        
