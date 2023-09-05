@@ -24,7 +24,11 @@ nomes = [
 ]
 
 
-def diasVividos (nome: str,anos:int,meses:int,dias:int):
+def diasVividos ():
+    nome = input("Digite o seu nome: ")
+    anos = int(input("Digite a quantidade de anos vividos"))
+    meses = int(input("Digite a quantidade meses"))
+    dias = int(input("Digite a quantidade em dias"))
     anosEmDias = anos * 365 
     mesesEmDias = meses * 365 
     diasTotaisVividos = anosEmDias + mesesEmDias + dias
@@ -33,5 +37,5 @@ def diasVividos (nome: str,anos:int,meses:int,dias:int):
 
 
 
-diasVividos( nomes[random.randint(0,len(nomes))],random.randint(1,120),random.randint(1,12),random.randint(0,365)  )
+
 

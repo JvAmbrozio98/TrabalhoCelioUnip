@@ -1,5 +1,8 @@
 import random
-def maiorNumeroDecimal (n1,n2,n3):
+def menorNumeroDecimal ():
+    n1 = int(input("Digite o numero desejado"))
+    n2 = int(input("Digite o numero desejado"))
+    n3 = int(input("Digite o numero desejado"))
     if ((n1<n2) and (n2 < n3)):
         print(f'O menor  numero eh {n1} ')
     else:
@@ -9,4 +12,3 @@ def maiorNumeroDecimal (n1,n2,n3):
             print(f'O menor numero eh {n3} ')
     print(n1,n2,n3)
 
-maiorNumeroDecimal(random.randint(0,10000),random.randint(0,10000),random.randint(0,10000))

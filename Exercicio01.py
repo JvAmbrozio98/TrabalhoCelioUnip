@@ -1,6 +1,7 @@
-import random
 
-def imprimirNumerosAnterioresPosteriores(numero:int):
+
+def imprimirNumerosAnterioresPosteriores():
+    numero = int(input("Digite o numero desejado"))
     numerosAnteriores = []
     numerosPosteriores = []
 
@@ -20,4 +21,3 @@ def imprimirNumerosAnterioresPosteriores(numero:int):
     print(f'Os numeros posteriores sao:{numerosPosteriores} \n')
 
 
-imprimirNumerosAnterioresPosteriores(random.randint(0,100000))

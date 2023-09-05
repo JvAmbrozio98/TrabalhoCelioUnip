@@ -23,4 +23,3 @@ def vendas():
         print ("Total", total)
         x=x+1
 
-vendas()
