@@ -20,19 +20,11 @@ panel.pack(side = "bottom", fill = "both", expand = "yes")
 img2 = ImageTk.PhotoImage(Image.open("baixados.png"))
 panel2 = tk.Label(window, image = img)
 
-
-
-
-
 x = (screen_width - window_width ) // 2
 y = (screen_height - window_height ) // 2
-#window.config(bg="celeio.jpg")
-#window.geometry(f"{window_width}x{window_height}+{x}+{y}")
+
 buttons = []
 functionList = [imprimirNumerosAnterioresPosteriores,maiorNumeroDecimal,menorNumeroDecimal,diasVividos,Exercicio05Main,vendas]
-
-
-
 
 for i in range(0,6):
     button =tk.Button(window, text=f"Exercicio  {i + 1}",command=functionList[i],background="skyblue3")
