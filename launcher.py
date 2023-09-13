@@ -1,5 +1,5 @@
 import tkinter as tk 
- 
+from PIL import Image, ImageTk
 from Exercicio01 import imprimirNumerosAnterioresPosteriores
 from Exercicio02 import maiorNumeroDecimal
 from Exercicio03 import menorNumeroDecimal
@@ -12,8 +12,21 @@ screen_width = window.winfo_screenwidth()
 screen_height = window.winfo_screenheight()
 window_height = 400
 window_width = 600
+
+img = ImageTk.PhotoImage(Image.open("celeio.jpg"))
+panel = tk.Label(window, image = img)
+panel.pack(side = "bottom", fill = "both", expand = "yes")
+
+img2 = ImageTk.PhotoImage(Image.open("baixados.png"))
+panel2 = tk.Label(window, image = img)
+
+
+
+
+
 x = (screen_width - window_width ) // 2
 y = (screen_height - window_height ) // 2
+#window.config(bg="celeio.jpg")
 #window.geometry(f"{window_width}x{window_height}+{x}+{y}")
 buttons = []
 functionList = [imprimirNumerosAnterioresPosteriores,maiorNumeroDecimal,menorNumeroDecimal,diasVividos,Exercicio05Main,vendas]
@@ -22,7 +35,7 @@ functionList = [imprimirNumerosAnterioresPosteriores,maiorNumeroDecimal,menorNum
 
 
 for i in range(0,6):
-    button =tk.Button(window, text=f"Exercicio  {i + 1}",command=functionList[i])
+    button =tk.Button(window, text=f"Exercicio  {i + 1}",command=functionList[i],background="skyblue3")
     buttons.append(button)
 
 for i, button in enumerate(buttons):
