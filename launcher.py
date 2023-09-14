@@ -6,6 +6,7 @@ from Exercicio03 import menorNumeroDecimal
 from Exercicio04 import diasVividos
 from Exercicio05 import Exercicio05Main
 from Exercicio06 import vendas
+from playsound import playsound
 
 window = tk.Tk()
 screen_width = window.winfo_screenwidth()
@@ -18,7 +19,8 @@ panel = tk.Label(window, image = img)
 panel.pack(side = "bottom", fill = "both", expand = "yes")
 
 img2 = ImageTk.PhotoImage(Image.open("baixados.png"))
-panel2 = tk.Label(window, image = img)
+panel2 = tk.Label(panel, image = img2)
+panel2.pack(side="left")
 
 
 buttons = []
