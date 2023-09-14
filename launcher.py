@@ -20,7 +20,11 @@ panel.pack(side = "bottom", fill = "both", expand = "yes")
 img2 = ImageTk.PhotoImage(Image.open("baixados.png"))
 panel2 = tk.Label(window, image = img)
 
-buttons = []
+
+
+
+
+
 functionList = [imprimirNumerosAnterioresPosteriores,maiorNumeroDecimal,menorNumeroDecimal,diasVividos,Exercicio05Main,vendas]
 
 for i in range(0,6):
