@@ -1,5 +1,4 @@
 import random
-import uuid
 import names 
 totalDeProdutos = []
 codigoAleatorio = 0
@@ -22,8 +21,8 @@ for i in  range (numeroDeProdutos):
     codigoAleatorio += 1 
     nomeAleatorio = names.get_first_name()
     estoqueAleatorio = random.randint(0,100000)
-    precoDeCustoAleatorio = random.randint(0,100000000)
-    precoDeVendaAleatorio = random.randint(precoDeCustoAleatorio,100000000000)
+    precoDeCustoAleatorio = random.randint(0,10000)
+    precoDeVendaAleatorio = random.randint(precoDeCustoAleatorio,100000)
     porcentagemIcmsAleatorio = random.uniform(0,100)
     porcentagemIpisAleatorio = random.uniform(0,100)
     produtoGerado = Produto(codigoAleatorio,nomeAleatorio,estoqueAleatorio,precoDeCustoAleatorio,precoDeVendaAleatorio,porcentagemIcmsAleatorio,porcentagemIpisAleatorio)
